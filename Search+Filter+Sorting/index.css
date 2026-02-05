@@ -1,0 +1,9 @@
+.searchListItems{
+    padding: 10px;
+
+    border: 1px solid black;
+}
+
+.searchListItems:hover{
+    background-color: aqua;
+}
