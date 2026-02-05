@@ -1,0 +1,16 @@
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.product-card{
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius: 6px;
+}
+
+.loader{
+    text-align: center;
+    padding: 20px;
+    display: none;
+}
