@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./index.css">
+    <title>table component with pagination and search functionality</title>
+
+</head>
+
+
+<body>
+    <div class="app">
+        <h1>table component with pagination and search functionality</h1>
+
+        <div class="container">
+            <input type="text " placeholder="search your table data" class="inputBox">
+            <select name="" id="" class="filter">
+                <option value="all" class="option">All Categories</option>
+            </select>
+
+
+        </div>
+        <table class="table-container">
+            <tr class="table-heading">
+                <th datakey="id">ID</th>
+                <th datakey="title">Title</th>
+                <th datakey="price">Price</th>
+                <th datakey="category">Category</th>
+                <th datakey="rating">Rating</th>
+            </tr>
+
+            <tbody class="table-body"></tbody>
+        </table>
+        <div class="pagination">
+            <button class="prev">Previous</button>
+            <span class="page-info"></span>
+            <button class="next">Next</button>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

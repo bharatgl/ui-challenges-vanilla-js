@@ -1,0 +1,27 @@
+.app{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
+
+.table-container{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.table-container th,
+.table-container,td{
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
