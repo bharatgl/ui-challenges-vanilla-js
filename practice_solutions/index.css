@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.inputBox {
+  width: 70%;
+  padding: 10px;
+}
+
+.searchItems {
+  border: 1px black solid;
+  cursor: pointer;
+
+  width: 70%;
+  border-radius: 2px;
+  padding: 10px;
+  align-items: left;
+  max-height: 200px;
+  border-radius: 5px;
+  overflow-y: auto;
+}
+
+.searchItem {
+  padding: 10px 0px;
+  border-bottom: 1px solid black;
+}
+
+.searchItem:hover {
+  background-color: aliceblue;
+  color: black;
+}
