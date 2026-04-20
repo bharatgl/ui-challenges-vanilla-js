@@ -9,7 +9,6 @@ function debounce(fn, delay) {
   };
 }
 
-module.exports = { debounce };
 
 // polyfill for throttle
 
@@ -24,4 +23,20 @@ function throttle(fn, limit) {
   };
 }
 
-module.exports = { throttle };
+
+// memoize polyfill
+
+function memoize(fn) {
+  const cache = new Map();
+  return function (...args) {
+    const key = JSON.stringify(args);
+    if (cache.has(key)) {
+      return cache.get(key);
+    }
+    const result = fn.apply(this, args);
+    cache.set(key, result);
+    return result;
+  };
+}
+
+module.exports = { debounce, throttle, memoize };
