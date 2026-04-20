@@ -9,7 +9,6 @@ function debounce(fn, delay) {
   };
 }
 
-
 // polyfill for throttle
 
 function throttle(fn, limit) {
@@ -22,7 +21,6 @@ function throttle(fn, limit) {
     }
   };
 }
-
 
 // memoize polyfill
 
@@ -39,4 +37,29 @@ function memoize(fn) {
   };
 }
 
-module.exports = { debounce, throttle, memoize };
+// polyfill for currying
+
+function currying(fn, depth) {
+  return function curried(...args) {
+    if (args.length >= fn.length) {
+      return fn.apply(this, args);
+    }
+    return (...next) => curried.apply(this, [...args, ...next]);
+  };
+}
+// array.prototype.flat
+
+Array.prototype.flat = function (depth = 1) {
+  const result = [];
+
+  for (const item of this) {
+    if (Array.isArray(item) && depth > 0) {
+      result.push(...item.flat(depth - 1));
+    } else {
+      result.push(item);
+    }
+  }
+  return result;
+};
+
+module.exports = { debounce, throttle, memoize, currying };
