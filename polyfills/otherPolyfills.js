@@ -11,4 +11,17 @@ function debounce(fn, delay) {
 
 module.exports = { debounce };
 
-// polyfill for throttle 
+// polyfill for throttle
+
+function throttle(fn, limit) {
+  let inThrottle = false;
+  return function (...args) {
+    if (!inThrottle) {
+      fn.apply(this, args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+}
+
+module.exports = { throttle };
